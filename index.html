@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jovian Drift SOS</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+
+  <form method="post" action="#">
+    <h1>Jovian Drift SOS</h1>
+    <p>Your ship has sustained critical damage while navigating the treacherous clouds of Jupiter. Send a high-priority
+      distress transmission to Earth.</p>
+
+    <fieldset>
+      <legend>Pilot Credentials</legend>
+
+      <label for="pilot-name">Pilot Name:</label>
+      <input type="text" id="pilot-name" name="pilot_name" placeholder="Enter name" required>
+
+      <label for="access-code">Access Code:</label>
+      <input type="password" id="access-code" name="access_code" required>
+
+      <label for="email">Command Email:</label>
+      <input type="email" id="email" name="email" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Vessel Diagnostics</legend>
+
+      <label for="hull-damage">Hull Damage (%):</label>
+      <input type="number" id="hull-damage" name="hull_damage" min="0" max="100" step="1" placeholder="0-100" required>
+
+      <label for="emergency-level">Emergency Level:</label>
+      <select id="emergency-level" name="emergency_level" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mission Log & Evidence</legend>
+
+      <label for="sos-message">SOS Message:</label>
+      <textarea id="sos-message" name="sos_message" rows="3" placeholder="Describe the emergency and any evidence..." required></textarea>
+
+      <div>
+        <input type="checkbox" id="quarantine" name="quarantine" required>
+        <label for="quarantine">I agree to quarantine protocols.</label>
+      </div>
+    </fieldset>
+
+    <button type="submit">INITIATE TRANSMISSION</button>
+    <button type="reset">RESET SYSTEM</button>
+  </form>
+
+  <script src="./scripts/launch.js"></script>
+</body>
+
+</html>
